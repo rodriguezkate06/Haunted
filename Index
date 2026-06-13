@@ -1,3 +1,4 @@
+https://mapninja.github.io/Earthsys144/data/index_jsonp_template.html
 <head>
     <meta charset="utf-8">
     <title>Google Sheet JSONP Map Template</title>
@@ -26,7 +27,7 @@ var map = new maplibregl.Map({
 map.on('load', function () {
     // This URL uses Google Sheets gviz JSONP, not the CSV download.
     // JSONP loads data with a script tag, which avoids the CORS issue that blocks many CSV downloads.
-    // Paste your spreadsheet ID after /d/ and paste your sheet tab name after sheet=.
+    // Paste your spreadsheet ID after /d/ and paste your sheet tab name after sheet=1HSpnxV1ZGvC0GPIcZmiECiGzCSa0LFWHKF2IXRgOhhg.
     var sheetScript = document.createElement('script');
     sheetScript.src = 'https://docs.google.com/spreadsheets/d/1HSpnxV1ZGvC0GPIcZmiECiGzCSa0LFWHKF2IXRgOhhg/gviz/tq?tqx=out:json;responseHandler:handleGoogleSheetData&sheet=PASTE_YOUR_SHEET_NAME_HERE';
     document.head.appendChild(sheetScript);
